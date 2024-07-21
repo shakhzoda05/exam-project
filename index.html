@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SIGN IN</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body>
+    <div class="w-[475px] h-[570px] bg-white m-auto rounded-lg mt-[100px]">
+        <img class="mx-auto pb-[43px] pt-[44px]" src="./images/sign-in logo.svg" alt="icon">
+<a class="pl-[194px] pr-[194px] font-semibold	text-black text-[22px]" href="#">SIGN IN</a>
+<p class="pl-[70px] pr-[70px] text-[#6C6C6C] pt-[9px] pb-[20px]">Enter your credentials to access your account</p>
+<form class="sign-in-form pl-[30px] pr-[30px]">
+    <h2 class="text-gray-900 pb-3">Login</h2>
+    <input class="mb-[20px] border-slate-300 border-[2px] w-[415px] h-[44px] rounded-[4px] pr-[30px] hover:border-yellow-500 active:border-yellow-500 focus:outline-none hover:shadow-lg" required type="text" placeholder="Enter your login" name="login"><br>
+    <h2 class="text-gray-900 pb-3">Parol</h2>
+    <input class="border-slate-300 border-[2px] w-[415px] h-[44px] rounded-[4px] pr-[30px] hover:border-yellow-500 active:border-yellow-500 focus:outline-none hover:shadow-lg mb-[35px]"required type="password" placeholder="Enter your password" name="password"><br><br>
+    <button type="submit" class="pb-3 pt-3 mb-3 bg-[#FEAF00] text-white w-[415px] h-[44px] rounded-[4px]">SIGN IN</button><br>
+    <a class="pl-[182px]" href="./sign-in-update.html">Sign up</a>
+  </form>
+
+</div>
+     
+
+
+    <script src="./js/sign-in.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>  

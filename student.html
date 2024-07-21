@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+      </style>
+    <title>STUDENT</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body class="student-page bg-[#F8F8F8]">
+  <header class="bg-[#F2EAE1] pl-[40px] pt-[18px] pb-[18px] flex items-center	justify-between"> 
+    <div>
+      <img src="./images/sign-in logo.svg" alt="svg" width="240" height="50">
+    </div>
+    <div>
+      <img class="pt-[5px] pl-[60px]" src="./images/vd-icon.svg" alt="svg">
+    </div>
+    <div class="">
+        <input class="active:outline-none active:border-slate-500 ml-[750px] w-[212px] h-[37px] rounded-lg pl-[13px] pt-[9px] pb-[9px]" type="search" placeholder="Search...">
+    </div>
+    <img class="pr-[51px]" src="./images/notification-icon.svg" alt="svg">
+  </header>
+    <div class="flex justify-between">
+      <nav class="w-[23%] h-[670px] bg-[#F2EAE1]">
+        <div class="p-5 text-center">
+          <label>
+            <img class= "mx-auto rounded-[50%]" src="./images/choose.png" alt="img" width="55" height="55">
+            <input class="hidden" type="file">
+          </label>
+          <h2 class="username font-bold text-black text-[20px] pt-[20px]" >Karthi Madesh</h2>
+          <p class="text-[#FEAF00] pt-[15px] pb-[63px]">Admin</p>
+          <div class="mx-auto bg-[#FEAF00] pt-[13px] pb-[13px] w-[80%] rounded-lg mb-[310px]">
+            <img class="inline-block pr-[8px]" src="./images/graduate-icon.svg" alt="svg">
+            <a href="#">Students</a><br>
+          </div>
+          <a href="./index.html">Logout</a>
+          <img class="inline-block pl-[15px]" src="./images/log-out-icon.svg" alt="icon">
+        </div>
+      </nav>
+    <div class="w-[77%] h-[670px] ">
+      <div class="flex ml-[30px] mr-[30px] items-center pt-[15px] border-b-[2px] border-[#E5E5E5] border-[80%]">
+        <h1 class="font-bold text-black text-[22px]">Students List</h1>
+        <img class="pl-[680px]" src="./images/sort-icon.svg" alt="img">
+        <button onclick="handleClickAddBtn()" class=" ml-[28px] bg-[#FEAF00] px-[17px] py-[13px] rounded-lg text-white mb-[11px] " type="button">ADD NEW STUDENT</button>
+      </div>
+    <div class="px-[20px] mt-[22px] mb-[22px] ">
+      <div>
+        <span class="text-[#ACACAC] text-[14px] pl-[120px]">Name</span>
+        <span class="text-[#ACACAC] text-[14px] pl-[121px]">Email</span>
+        <span class="text-[#ACACAC] text-[14px] pl-[150px]">Phone</span>
+        <span class="text-[#ACACAC] text-[14px] pl-[84px]">Enroll Number</span>
+        <span class="text-[#ACACAC] text-[14px] pl-[125px]">Date   admission</span>
+      </div> <br>
+      <div class="bg-white rounded-lg">
+        <img class="rounded-md inline-block ml-[27px] pt-[15px] pb-[15px]" src="./images/people-img.png" alt="img" width="65" height="55">
+        <span  class="nameID pl-[25px]">Karthi</span>
+        <span class="gmailId pl-[115px]">karthi@gmmail.com</span>
+        <span  class="phoneNumber pl-[29px]">7305477760</span>
+        <span  class="newNumber pl-[35px]">1234567305477760</span>
+        <span  class="dataValue pl-[75px]">08-Dec, 2021</span>
+        <img class="pl-[30px] inline-block" src="./images/three-dot.png" alt="img">
+        <img class="pl-[10px] inline-block"  src="./images/update-icon.svg" alt="img">
+        <img class="pl-[10px] inline-block" src="./images/delete-icon.svg" alt="img">
+      </div>
+  </div>
+  </div>
+  </div>
+   
+  <div class="modal-wrapper fixed w-full top-0 buttom-0 backdrop-blur-[10px] duration-300 scale-0">
+    <form onsubmit="handleSubmitCreateStudent()" class="modal modal-form relative mt-[100px] w-[1000px] h-[500px] pt-[41px] pb-[34px] bg-yellow-100 mx-auto rounded-[35px]">
+      <label>
+        <input class="changeImgUrl hidden" type="file">
+        <img class="render-img mx-auto" src="./images/choose.png" alt="img" width="140" height="140">
+      </label>
+     <div class="flex justify-between mx-auto pl-[150px]">
+      <div class="w-[48%]">
+        <input class="px-[8px] rounded-lg mb-[14px] outline-none w-[250px] h-[40px] border-yellow-300 border-solid border-2" type="text" placeholder="Name">
+        <input class="px-[8px] rounded-lg mb-[14px] outline-none w-[250px] h-[40px] border-yellow-300 border-solid border-2" type="email" placeholder="Email">
+        <input class= "px-[8px] rounded-lg mb-[14px] outline-none w-[250px] h-[40px] border-yellow-300 border-solid border-2" type="text" placeholder="Phone">
+      </div>
+
+      <div class="w-[48%]">
+        <input class= "px-[8px] rounded-lg mb-[14px] outline-none w-[250px] h-[40px] border-yellow-300 border-solid border-2" type="text" placeholder="Enroll Number">
+        <input class= "px-[8px] rounded-lg mb-[14px] outline-none w-[250px] h-[40px] border-yellow-300 border-solid border-2" type="date" placeholder="Date admission">
+        <input class= "px-[8px] rounded-lg [14px] outline-none w-[250px] h-[40px] border-yellow-300 border-solid border-2" type="text" placeholder="More information">
+      </div>
+
+      <button class="mt-[36px] ml-[50px] text-yellow-300 text-[30px] py-[7px] px-[40px] border-[#FEAF00] border-dashed border-2 rounded-lg hover:text-yellow-500 bg-white" type="submit">Submit</button>
+      <button onclick="closeModal()" class="absolute top-[30px] right-[40px]">
+        <img src="./images/close icon.svg" alt="img" width="38" height="38">
+      </button>
+    </form>
+  </div>
+  
+
+
+   
+
+  
+  
+
+
+
+ 
+
+    <script src="./js/student.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
